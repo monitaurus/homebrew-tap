@@ -10,7 +10,7 @@ class Triage < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/monitaurus/triage/releases/download/v1.0.0/triage_Darwin_x86_64.tar.gz"
-      sha256 "088e3798ab35db160f84c505aa8b3ad6646fe1d1d445eee8947ee31ccef3b86c"
+      sha256 "ac4a2c09b78401c2e76fecf1b9c97454bdb95e57ca69d7401a3816e33b9e57d2"
 
       define_method(:install) do
         bin.install "triage"
@@ -18,7 +18,7 @@ class Triage < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/monitaurus/triage/releases/download/v1.0.0/triage_Darwin_arm64.tar.gz"
-      sha256 "54777579addf1fc60325fcb3a16db9f09ac818c172fc60b832c709b727fb979a"
+      sha256 "94356ab73ce69195126679596efec628ddf7a0fb45bd985014e5313323c7d5ef"
 
       define_method(:install) do
         bin.install "triage"
@@ -29,14 +29,14 @@ class Triage < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/monitaurus/triage/releases/download/v1.0.0/triage_Linux_x86_64.tar.gz"
-      sha256 "f0e145c4f94d8344dff46c68b445cd93ef2d636f6645d484709cec179195b074"
+      sha256 "092ba9169ad6912e2aba20cf3872a20d3865832fefdc971ff21542d961732179"
       define_method(:install) do
         bin.install "triage"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/monitaurus/triage/releases/download/v1.0.0/triage_Linux_arm64.tar.gz"
-      sha256 "d7e3c91e33d0c0a61bb70bd242f53fd2cfd9ade0164ff6d2ea62aa1afbd4b844"
+      sha256 "fb298b83f44b0108c79bd28a31961466a8815271ea6817df839189cd51f32899"
       define_method(:install) do
         bin.install "triage"
       end
